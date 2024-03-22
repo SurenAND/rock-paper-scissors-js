@@ -53,3 +53,19 @@ const checkResult = (userChoice, botChoice) => {
   }
   return userScore, botScore, gameResult;
 };
+
+const playTheGame = () => {
+  userChoice = getUserChoice();
+  botChoice = makeBotChoice();
+  gameResult = checkResult(userChoice, botChoice);
+  if (userChoice === "Invalid! please choose between (rock/paper/scissors)!") {
+    alert(userChoice);
+  } else {
+    alert(
+      `****ROCK PAPER SCISSORS****\n\nYou Choose: ${userChoice} *** Bot Choose: ${botChoice}\n\n${gameResult} \n\n:::Scores:::\nYou: ${userScore}\nBot: ${botScore}`
+    );
+  }
+  playTheGame();
+};
+
+playTheGame();
