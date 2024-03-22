@@ -1,4 +1,12 @@
 "use strict";
+
+// variables
+let userScore = 0;
+let botScore = 0;
+let gameResult;
+let userChoice;
+let botChoice;
+
 // user choice
 const getUserChoice = () => {
   const choices = ["rock", "paper", "scissors"];
